@@ -1,0 +1,996 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?>
+
+<cproject>
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="org.eclipse.cdt.core.default.config.1">
+			<storageModule buildSystemId="org.eclipse.cdt.core.defaultConfigDataProvider" id="org.eclipse.cdt.core.default.config.1" moduleId="org.eclipse.cdt.core.settings" name="Configuration">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GNU_ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.language.mapping">
+				<project-mappings/>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+			<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets">
+				<buildTargets>
+					<target name="[exe] raycast" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>raycast</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[exe] raycast/fast" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>raycast/fast</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="Build" path="[Targets]/[exe] raycast" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments>-C "/home/wdanilo/dev/opengl/rcast/build" </buildArguments>
+						<buildTarget>raycast</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="Clean" path="[Targets]/[exe] raycast" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/cmake</buildCommand>
+						<buildArguments>-E chdir "/home/wdanilo/dev/opengl/rcast/build" "/usr/bin/cmake" -P "CMakeFiles/raycast.dir/cmake_clean.cmake"</buildArguments>
+						<buildTarget/>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name=": rebuild_cache" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>rebuild_cache</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name=": all" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>all</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name=": clean" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>clean</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] common/controls.cpp.o" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>common/controls.cpp.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] common/controls.cpp.i" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>common/controls.cpp.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] common/controls.cpp.s" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>common/controls.cpp.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] common/objloader.cpp.o" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>common/objloader.cpp.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] common/objloader.cpp.i" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>common/objloader.cpp.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] common/objloader.cpp.s" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>common/objloader.cpp.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] common/shader.cpp.o" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>common/shader.cpp.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] common/shader.cpp.i" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>common/shader.cpp.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] common/shader.cpp.s" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>common/shader.cpp.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] common/texture.cpp.o" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>common/texture.cpp.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] common/texture.cpp.i" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>common/texture.cpp.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] common/texture.cpp.s" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>common/texture.cpp.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] raycast/raycast.cpp.o" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>raycast/raycast.cpp.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] raycast/raycast.cpp.i" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>raycast/raycast.cpp.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] raycast/raycast.cpp.s" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>raycast/raycast.cpp.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[lib] ANTTWEAKBAR_151_OGLCORE_GLFW" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>ANTTWEAKBAR_151_OGLCORE_GLFW</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[lib] ANTTWEAKBAR_151_OGLCORE_GLFW/fast" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>ANTTWEAKBAR_151_OGLCORE_GLFW/fast</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="Build" path="[Targets]/[lib] ANTTWEAKBAR_151_OGLCORE_GLFW" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments>-C "/home/wdanilo/dev/opengl/rcast/build" </buildArguments>
+						<buildTarget>ANTTWEAKBAR_151_OGLCORE_GLFW</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="Clean" path="[Targets]/[lib] ANTTWEAKBAR_151_OGLCORE_GLFW" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/cmake</buildCommand>
+						<buildArguments>-E chdir "/home/wdanilo/dev/opengl/rcast/build/external" "/usr/bin/cmake" -P "CMakeFiles/ANTTWEAKBAR_151_OGLCORE_GLFW.dir/cmake_clean.cmake"</buildArguments>
+						<buildTarget/>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[lib] GLEW_190" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>GLEW_190</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[lib] GLEW_190/fast" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>GLEW_190/fast</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="Build" path="[Targets]/[lib] GLEW_190" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments>-C "/home/wdanilo/dev/opengl/rcast/build" </buildArguments>
+						<buildTarget>GLEW_190</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="Clean" path="[Targets]/[lib] GLEW_190" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/cmake</buildCommand>
+						<buildArguments>-E chdir "/home/wdanilo/dev/opengl/rcast/build/external" "/usr/bin/cmake" -P "CMakeFiles/GLEW_190.dir/cmake_clean.cmake"</buildArguments>
+						<buildTarget/>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[lib] GLFW_276" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>GLFW_276</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[lib] GLFW_276/fast" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>GLFW_276/fast</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="Build" path="[Targets]/[lib] GLFW_276" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments>-C "/home/wdanilo/dev/opengl/rcast/build" </buildArguments>
+						<buildTarget>GLFW_276</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="Clean" path="[Targets]/[lib] GLFW_276" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/cmake</buildCommand>
+						<buildArguments>-E chdir "/home/wdanilo/dev/opengl/rcast/build/external" "/usr/bin/cmake" -P "CMakeFiles/GLFW_276.dir/cmake_clean.cmake"</buildArguments>
+						<buildTarget/>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name=": all" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>all</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name=": clean" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>clean</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] AntTweakBar-1.15/src/LoadOGL.cpp.o" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>AntTweakBar-1.15/src/LoadOGL.cpp.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] AntTweakBar-1.15/src/LoadOGL.cpp.i" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>AntTweakBar-1.15/src/LoadOGL.cpp.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] AntTweakBar-1.15/src/LoadOGL.cpp.s" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>AntTweakBar-1.15/src/LoadOGL.cpp.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] AntTweakBar-1.15/src/LoadOGLCore.cpp.o" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>AntTweakBar-1.15/src/LoadOGLCore.cpp.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] AntTweakBar-1.15/src/LoadOGLCore.cpp.i" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>AntTweakBar-1.15/src/LoadOGLCore.cpp.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] AntTweakBar-1.15/src/LoadOGLCore.cpp.s" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>AntTweakBar-1.15/src/LoadOGLCore.cpp.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] AntTweakBar-1.15/src/TwBar.cpp.o" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>AntTweakBar-1.15/src/TwBar.cpp.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] AntTweakBar-1.15/src/TwBar.cpp.i" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>AntTweakBar-1.15/src/TwBar.cpp.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] AntTweakBar-1.15/src/TwBar.cpp.s" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>AntTweakBar-1.15/src/TwBar.cpp.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] AntTweakBar-1.15/src/TwColors.cpp.o" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>AntTweakBar-1.15/src/TwColors.cpp.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] AntTweakBar-1.15/src/TwColors.cpp.i" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>AntTweakBar-1.15/src/TwColors.cpp.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] AntTweakBar-1.15/src/TwColors.cpp.s" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>AntTweakBar-1.15/src/TwColors.cpp.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] AntTweakBar-1.15/src/TwEventGLFW.c.o" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>AntTweakBar-1.15/src/TwEventGLFW.c.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] AntTweakBar-1.15/src/TwEventGLFW.c.i" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>AntTweakBar-1.15/src/TwEventGLFW.c.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] AntTweakBar-1.15/src/TwEventGLFW.c.s" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>AntTweakBar-1.15/src/TwEventGLFW.c.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] AntTweakBar-1.15/src/TwFonts.cpp.o" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>AntTweakBar-1.15/src/TwFonts.cpp.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] AntTweakBar-1.15/src/TwFonts.cpp.i" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>AntTweakBar-1.15/src/TwFonts.cpp.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] AntTweakBar-1.15/src/TwFonts.cpp.s" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>AntTweakBar-1.15/src/TwFonts.cpp.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] AntTweakBar-1.15/src/TwMgr.cpp.o" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>AntTweakBar-1.15/src/TwMgr.cpp.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] AntTweakBar-1.15/src/TwMgr.cpp.i" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>AntTweakBar-1.15/src/TwMgr.cpp.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] AntTweakBar-1.15/src/TwMgr.cpp.s" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>AntTweakBar-1.15/src/TwMgr.cpp.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] AntTweakBar-1.15/src/TwOpenGL.cpp.o" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>AntTweakBar-1.15/src/TwOpenGL.cpp.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] AntTweakBar-1.15/src/TwOpenGL.cpp.i" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>AntTweakBar-1.15/src/TwOpenGL.cpp.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] AntTweakBar-1.15/src/TwOpenGL.cpp.s" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>AntTweakBar-1.15/src/TwOpenGL.cpp.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] AntTweakBar-1.15/src/TwOpenGLCore.cpp.o" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>AntTweakBar-1.15/src/TwOpenGLCore.cpp.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] AntTweakBar-1.15/src/TwOpenGLCore.cpp.i" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>AntTweakBar-1.15/src/TwOpenGLCore.cpp.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] AntTweakBar-1.15/src/TwOpenGLCore.cpp.s" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>AntTweakBar-1.15/src/TwOpenGLCore.cpp.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] AntTweakBar-1.15/src/TwPrecomp.cpp.o" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>AntTweakBar-1.15/src/TwPrecomp.cpp.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] AntTweakBar-1.15/src/TwPrecomp.cpp.i" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>AntTweakBar-1.15/src/TwPrecomp.cpp.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] AntTweakBar-1.15/src/TwPrecomp.cpp.s" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>AntTweakBar-1.15/src/TwPrecomp.cpp.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] glew-1.9.0/src/glew.c.o" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glew-1.9.0/src/glew.c.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] glew-1.9.0/src/glew.c.i" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glew-1.9.0/src/glew.c.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] glew-1.9.0/src/glew.c.s" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glew-1.9.0/src/glew.c.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] glfw-2.7.6/lib/enable.c.o" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/enable.c.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] glfw-2.7.6/lib/enable.c.i" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/enable.c.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] glfw-2.7.6/lib/enable.c.s" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/enable.c.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] glfw-2.7.6/lib/fullscreen.c.o" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/fullscreen.c.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] glfw-2.7.6/lib/fullscreen.c.i" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/fullscreen.c.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] glfw-2.7.6/lib/fullscreen.c.s" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/fullscreen.c.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] glfw-2.7.6/lib/glext.c.o" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/glext.c.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] glfw-2.7.6/lib/glext.c.i" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/glext.c.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] glfw-2.7.6/lib/glext.c.s" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/glext.c.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] glfw-2.7.6/lib/image.c.o" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/image.c.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] glfw-2.7.6/lib/image.c.i" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/image.c.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] glfw-2.7.6/lib/image.c.s" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/image.c.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] glfw-2.7.6/lib/init.c.o" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/init.c.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] glfw-2.7.6/lib/init.c.i" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/init.c.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] glfw-2.7.6/lib/init.c.s" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/init.c.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] glfw-2.7.6/lib/input.c.o" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/input.c.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] glfw-2.7.6/lib/input.c.i" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/input.c.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] glfw-2.7.6/lib/input.c.s" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/input.c.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] glfw-2.7.6/lib/joystick.c.o" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/joystick.c.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] glfw-2.7.6/lib/joystick.c.i" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/joystick.c.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] glfw-2.7.6/lib/joystick.c.s" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/joystick.c.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] glfw-2.7.6/lib/stream.c.o" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/stream.c.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] glfw-2.7.6/lib/stream.c.i" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/stream.c.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] glfw-2.7.6/lib/stream.c.s" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/stream.c.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] glfw-2.7.6/lib/tga.c.o" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/tga.c.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] glfw-2.7.6/lib/tga.c.i" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/tga.c.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] glfw-2.7.6/lib/tga.c.s" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/tga.c.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] glfw-2.7.6/lib/thread.c.o" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/thread.c.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] glfw-2.7.6/lib/thread.c.i" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/thread.c.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] glfw-2.7.6/lib/thread.c.s" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/thread.c.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] glfw-2.7.6/lib/time.c.o" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/time.c.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] glfw-2.7.6/lib/time.c.i" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/time.c.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] glfw-2.7.6/lib/time.c.s" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/time.c.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] glfw-2.7.6/lib/window.c.o" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/window.c.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] glfw-2.7.6/lib/window.c.i" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/window.c.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] glfw-2.7.6/lib/window.c.s" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/window.c.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] glfw-2.7.6/lib/x11/x11_enable.c.o" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/x11/x11_enable.c.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] glfw-2.7.6/lib/x11/x11_enable.c.i" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/x11/x11_enable.c.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] glfw-2.7.6/lib/x11/x11_enable.c.s" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/x11/x11_enable.c.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] glfw-2.7.6/lib/x11/x11_fullscreen.c.o" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/x11/x11_fullscreen.c.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] glfw-2.7.6/lib/x11/x11_fullscreen.c.i" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/x11/x11_fullscreen.c.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] glfw-2.7.6/lib/x11/x11_fullscreen.c.s" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/x11/x11_fullscreen.c.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] glfw-2.7.6/lib/x11/x11_glext.c.o" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/x11/x11_glext.c.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] glfw-2.7.6/lib/x11/x11_glext.c.i" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/x11/x11_glext.c.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] glfw-2.7.6/lib/x11/x11_glext.c.s" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/x11/x11_glext.c.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] glfw-2.7.6/lib/x11/x11_init.c.o" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/x11/x11_init.c.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] glfw-2.7.6/lib/x11/x11_init.c.i" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/x11/x11_init.c.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] glfw-2.7.6/lib/x11/x11_init.c.s" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/x11/x11_init.c.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] glfw-2.7.6/lib/x11/x11_joystick.c.o" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/x11/x11_joystick.c.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] glfw-2.7.6/lib/x11/x11_joystick.c.i" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/x11/x11_joystick.c.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] glfw-2.7.6/lib/x11/x11_joystick.c.s" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/x11/x11_joystick.c.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] glfw-2.7.6/lib/x11/x11_keysym2unicode.c.o" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/x11/x11_keysym2unicode.c.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] glfw-2.7.6/lib/x11/x11_keysym2unicode.c.i" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/x11/x11_keysym2unicode.c.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] glfw-2.7.6/lib/x11/x11_keysym2unicode.c.s" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/x11/x11_keysym2unicode.c.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] glfw-2.7.6/lib/x11/x11_thread.c.o" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/x11/x11_thread.c.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] glfw-2.7.6/lib/x11/x11_thread.c.i" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/x11/x11_thread.c.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] glfw-2.7.6/lib/x11/x11_thread.c.s" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/x11/x11_thread.c.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] glfw-2.7.6/lib/x11/x11_time.c.o" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/x11/x11_time.c.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] glfw-2.7.6/lib/x11/x11_time.c.i" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/x11/x11_time.c.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] glfw-2.7.6/lib/x11/x11_time.c.s" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/x11/x11_time.c.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[obj] glfw-2.7.6/lib/x11/x11_window.c.o" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/x11/x11_window.c.o</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[pre] glfw-2.7.6/lib/x11/x11_window.c.i" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/x11/x11_window.c.i</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+					<target name="[to asm] glfw-2.7.6/lib/x11/x11_window.c.s" path="external" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+						<buildCommand>/usr/bin/gmake</buildCommand>
+						<buildArguments/>
+						<buildTarget>glfw-2.7.6/lib/x11/x11_window.c.s</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>false</useDefaultCommand>
+					</target>
+				</buildTargets>
+			</storageModule>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="agh-rcast.null.1" name="agh-rcast"/>
+	</storageModule>
+	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile"/>
+		<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+			<buildOutputProvider>
+				<openAction enabled="true" filePath=""/>
+				<parser enabled="true"/>
+			</buildOutputProvider>
+			<scannerInfoProvider id="specsFile">
+				<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="/usr/bin/cc" useDefault="true"/>
+				<parser enabled="true"/>
+			</scannerInfoProvider>
+		</profile>
+		<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+			<buildOutputProvider>
+				<openAction enabled="true" filePath=""/>
+				<parser enabled="true"/>
+			</buildOutputProvider>
+			<scannerInfoProvider id="makefileGenerator">
+				<runAction arguments="-f ${project_name}_scd.mk" command="/usr/bin/gmake" useDefault="true"/>
+				<parser enabled="true"/>
+			</scannerInfoProvider>
+		</profile>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.pathentry">
+		<pathentry excluding="**/CMakeFiles/" kind="out" path=""/>
+		<pathentry kind="mac" name="TW_STATIC" path="" value=""/>
+		<pathentry kind="mac" name="TW_NO_LIB_PRAGMA" path="" value=""/>
+		<pathentry kind="mac" name="TW_NO_DIRECT3D" path="" value=""/>
+		<pathentry kind="mac" name="GLEW_STATIC" path="" value=""/>
+		<pathentry kind="mac" name="_CRT_SECURE_NO_WARNINGS" path="" value=""/>
+		<pathentry kind="mac" name="_GLFW_HAS_DLOPEN" path="" value=""/>
+		<pathentry kind="mac" name="_GLFW_HAS_XRANDR" path="" value=""/>
+		<pathentry kind="mac" name="_UNIX" path="" value=""/>
+		<pathentry include="/home/wdanilo/dev/opengl/rcast/src/external/AntTweakBar-1.15/include" kind="inc" path="" system="true"/>
+		<pathentry include="/home/wdanilo/dev/opengl/rcast/src/external/glfw-2.7.6/include" kind="inc" path="" system="true"/>
+		<pathentry include="/home/wdanilo/dev/opengl/rcast/src/external/glm-0.9.4.0" kind="inc" path="" system="true"/>
+		<pathentry include="/home/wdanilo/dev/opengl/rcast/src/external/glew-1.9.0/include" kind="inc" path="" system="true"/>
+		<pathentry include="/opt/nvidia-cg-toolkit/include" kind="inc" path="" system="true"/>
+		<pathentry include="/home/wdanilo/dev/opengl/rcast/src" kind="inc" path="" system="true"/>
+		<pathentry include="/home/wdanilo/dev/opengl/rcast/src/external/glfw-2.7.6/lib/x11" kind="inc" path="" system="true"/>
+		<pathentry include="/home/wdanilo/dev/opengl/rcast/src/external/glfw-2.7.6/lib" kind="inc" path="" system="true"/>
+		<pathentry excluding="backup/" kind="src" path=""/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+</cproject>

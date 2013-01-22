@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>agh-rcast-Debug@build</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.cdt.make.core.makeBuilder</name>
+			<triggers>clean,full,incremental,</triggers>
+			<arguments>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.cleanBuildTarget</key>
+					<value>clean</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.enableCleanBuild</key>
+					<value>true</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.append_environment</key>
+					<value>true</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.stopOnError</key>
+					<value>true</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.enabledIncrementalBuild</key>
+					<value>true</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.build.command</key>
+					<value>/usr/bin/gmake</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.contents</key>
+					<value>org.eclipse.cdt.make.core.activeConfigSettings</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.build.target.inc</key>
+					<value>all</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.build.arguments</key>
+					<value></value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.buildLocation</key>
+					<value>/home/wdanilo/dev/opengl/rcast/build</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.useDefaultBuildCmd</key>
+					<value>false</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.environment</key>
+					<value>VERBOSE=1|CMAKE_NO_VERBOSE=1|</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.enableFullBuild</key>
+					<value>true</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.build.target.auto</key>
+					<value>all</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.enableAutoBuild</key>
+					<value>false</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.build.target.clean</key>
+					<value>clean</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.fullBuildTarget</key>
+					<value>all</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.buildArguments</key>
+					<value></value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.build.location</key>
+					<value>/home/wdanilo/dev/opengl/rcast/build</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.make.core.autoBuildTarget</key>
+					<value>all</value>
+				</dictionary>
+				<dictionary>
+					<key>org.eclipse.cdt.core.errorOutputParser</key>
+					<value>org.eclipse.cdt.core.MakeErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GLDErrorParser;</value>
+				</dictionary>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.cdt.make.core.ScannerConfigBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.cdt.core.ccnature</nature>
+		<nature>org.eclipse.cdt.make.core.makeNature</nature>
+		<nature>org.eclipse.cdt.make.core.ScannerConfigNature</nature>
+		<nature>org.eclipse.cdt.core.cnature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>[Source directory]</name>
+			<type>2</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src</location>
+		</link>
+		<link>
+			<name>[Subprojects]</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Subprojects]/agh-rcast</name>
+			<type>2</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src</location>
+		</link>
+		<link>
+			<name>[Targets]</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] raycast</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] raycast/</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] raycast/Source Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] raycast/Source Files/raycast.cpp</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/raycast/raycast.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] raycast/Header Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] raycast/CMake Rules</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] raycast/Resources</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] raycast/Object Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] raycast/common</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[exe] raycast/common/shader.cpp</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/common/shader.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] raycast/common/shader.hpp</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/common/shader.hpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] raycast/common/controls.cpp</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/common/controls.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] raycast/common/controls.hpp</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/common/controls.hpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] raycast/common/texture.cpp</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/common/texture.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] raycast/common/texture.hpp</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/common/texture.hpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] raycast/common/objloader.cpp</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/common/objloader.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[exe] raycast/common/objloader.hpp</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/common/objloader.hpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] ANTTWEAKBAR_151_OGLCORE_GLFW</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] ANTTWEAKBAR_151_OGLCORE_GLFW/</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] ANTTWEAKBAR_151_OGLCORE_GLFW/Source Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] ANTTWEAKBAR_151_OGLCORE_GLFW/Source Files/LoadOGL.cpp</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/AntTweakBar-1.15/src/LoadOGL.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] ANTTWEAKBAR_151_OGLCORE_GLFW/Source Files/LoadOGLCore.cpp</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/AntTweakBar-1.15/src/LoadOGLCore.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] ANTTWEAKBAR_151_OGLCORE_GLFW/Source Files/TwColors.cpp</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/AntTweakBar-1.15/src/TwColors.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] ANTTWEAKBAR_151_OGLCORE_GLFW/Source Files/TwBar.cpp</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/AntTweakBar-1.15/src/TwBar.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] ANTTWEAKBAR_151_OGLCORE_GLFW/Source Files/TwEventGLFW.c</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/AntTweakBar-1.15/src/TwEventGLFW.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] ANTTWEAKBAR_151_OGLCORE_GLFW/Source Files/TwFonts.cpp</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/AntTweakBar-1.15/src/TwFonts.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] ANTTWEAKBAR_151_OGLCORE_GLFW/Source Files/TwMgr.cpp</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/AntTweakBar-1.15/src/TwMgr.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] ANTTWEAKBAR_151_OGLCORE_GLFW/Source Files/TwOpenGL.cpp</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/AntTweakBar-1.15/src/TwOpenGL.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] ANTTWEAKBAR_151_OGLCORE_GLFW/Source Files/TwOpenGLCore.cpp</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/AntTweakBar-1.15/src/TwOpenGLCore.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] ANTTWEAKBAR_151_OGLCORE_GLFW/Source Files/TwPrecomp.cpp</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/AntTweakBar-1.15/src/TwPrecomp.cpp</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] ANTTWEAKBAR_151_OGLCORE_GLFW/Header Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] ANTTWEAKBAR_151_OGLCORE_GLFW/Header Files/AntPerfTimer.h</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/AntTweakBar-1.15/src/AntPerfTimer.h</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] ANTTWEAKBAR_151_OGLCORE_GLFW/Header Files/LoadOGL.h</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/AntTweakBar-1.15/src/LoadOGL.h</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] ANTTWEAKBAR_151_OGLCORE_GLFW/Header Files/LoadOGLCore.h</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/AntTweakBar-1.15/src/LoadOGLCore.h</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] ANTTWEAKBAR_151_OGLCORE_GLFW/Header Files/MiniGLFW.h</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/AntTweakBar-1.15/src/MiniGLFW.h</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] ANTTWEAKBAR_151_OGLCORE_GLFW/Header Files/resource.h</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/AntTweakBar-1.15/src/resource.h</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] ANTTWEAKBAR_151_OGLCORE_GLFW/Header Files/TwBar.h</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/AntTweakBar-1.15/src/TwBar.h</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] ANTTWEAKBAR_151_OGLCORE_GLFW/Header Files/TwColors.h</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/AntTweakBar-1.15/src/TwColors.h</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] ANTTWEAKBAR_151_OGLCORE_GLFW/Header Files/TwFonts.h</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/AntTweakBar-1.15/src/TwFonts.h</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] ANTTWEAKBAR_151_OGLCORE_GLFW/Header Files/TwGraph.h</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/AntTweakBar-1.15/src/TwGraph.h</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] ANTTWEAKBAR_151_OGLCORE_GLFW/Header Files/TwMgr.h</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/AntTweakBar-1.15/src/TwMgr.h</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] ANTTWEAKBAR_151_OGLCORE_GLFW/Header Files/TwOpenGL.h</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/AntTweakBar-1.15/src/TwOpenGL.h</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] ANTTWEAKBAR_151_OGLCORE_GLFW/Header Files/TwOpenGLCore.h</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/AntTweakBar-1.15/src/TwOpenGLCore.h</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] ANTTWEAKBAR_151_OGLCORE_GLFW/Header Files/TwPrecomp.h</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/AntTweakBar-1.15/src/TwPrecomp.h</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] ANTTWEAKBAR_151_OGLCORE_GLFW/CMake Rules</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] ANTTWEAKBAR_151_OGLCORE_GLFW/Resources</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] ANTTWEAKBAR_151_OGLCORE_GLFW/Object Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLEW_190</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLEW_190/</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLEW_190/Source Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLEW_190/Source Files/glew.c</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/glew-1.9.0/src/glew.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLEW_190/Header Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLEW_190/CMake Rules</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLEW_190/Resources</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLEW_190/Object Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLFW_276</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLFW_276/</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLFW_276/Source Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLFW_276/Source Files/enable.c</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/glfw-2.7.6/lib/enable.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLFW_276/Source Files/fullscreen.c</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/glfw-2.7.6/lib/fullscreen.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLFW_276/Source Files/glext.c</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/glfw-2.7.6/lib/glext.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLFW_276/Source Files/image.c</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/glfw-2.7.6/lib/image.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLFW_276/Source Files/init.c</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/glfw-2.7.6/lib/init.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLFW_276/Source Files/input.c</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/glfw-2.7.6/lib/input.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLFW_276/Source Files/joystick.c</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/glfw-2.7.6/lib/joystick.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLFW_276/Source Files/stream.c</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/glfw-2.7.6/lib/stream.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLFW_276/Source Files/tga.c</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/glfw-2.7.6/lib/tga.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLFW_276/Source Files/thread.c</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/glfw-2.7.6/lib/thread.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLFW_276/Source Files/time.c</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/glfw-2.7.6/lib/time.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLFW_276/Source Files/window.c</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/glfw-2.7.6/lib/window.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLFW_276/Source Files/x11_enable.c</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/glfw-2.7.6/lib/x11/x11_enable.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLFW_276/Source Files/x11_fullscreen.c</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/glfw-2.7.6/lib/x11/x11_fullscreen.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLFW_276/Source Files/x11_glext.c</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/glfw-2.7.6/lib/x11/x11_glext.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLFW_276/Source Files/x11_init.c</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/glfw-2.7.6/lib/x11/x11_init.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLFW_276/Source Files/x11_joystick.c</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/glfw-2.7.6/lib/x11/x11_joystick.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLFW_276/Source Files/x11_keysym2unicode.c</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/glfw-2.7.6/lib/x11/x11_keysym2unicode.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLFW_276/Source Files/x11_thread.c</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/glfw-2.7.6/lib/x11/x11_thread.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLFW_276/Source Files/x11_time.c</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/glfw-2.7.6/lib/x11/x11_time.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLFW_276/Source Files/x11_window.c</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/glfw-2.7.6/lib/x11/x11_window.c</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLFW_276/Header Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLFW_276/Header Files/platform.h</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/glfw-2.7.6/lib/x11/platform.h</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLFW_276/Header Files/internal.h</name>
+			<type>1</type>
+			<location>/home/wdanilo/dev/opengl/rcast/src/external/glfw-2.7.6/lib/internal.h</location>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLFW_276/CMake Rules</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLFW_276/Resources</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>[Targets]/[lib] GLFW_276/Object Files</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+	</linkedResources>
+</projectDescription>
