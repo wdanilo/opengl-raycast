@@ -66,52 +66,71 @@ float3 HSVtoRGB(float3 HSV)
 fragment_out fragment_main( vertex_fragment   IN,
 			                uniform sampler2D tex, 
                             uniform sampler3D volume_tex, 
-			                uniform float     stepsize			  
+			                uniform float     stepsize,
+			                uniform float     adaptive_mode,
+			                uniform float     fill_mode,		  
+			                uniform float     xray_mode,
+                            uniform float     color_mode  	  
 			               ){
   fragment_out OUT;
-  float2 texc  = ((IN.P_world.xy / IN.P_world.w) + 1) / 2; // find the right place to lookup in the backside buffer
-  float4 start = IN.TexCoord; // the start position of the ray is stored in the texturecoordinate
-  float4 back_position  = tex2D(tex, texc);
-  float3 dir = float3(0,0,0);
-  dir.x = back_position.x - start.x;
-  dir.y = back_position.y - start.y;
-  dir.z = back_position.z - start.z;
-  float len = length(dir.xyz); // the length from front to back is calculated and used to terminate the ray
+  float2 texc_world   = ((IN.P_world.xy / IN.P_world.w) + 1) / 2; 
+  float4 sample_start = IN.TexCoord; 
+  float4 sample_end   = tex2D(tex, texc_world);
+  float3 dir = float3(sample_end.x - sample_start.x,
+  					  sample_end.y - sample_start.y,
+  					  sample_end.z - sample_start.z);
+  float  len = length(dir.xyz);
   float3 norm_dir = normalize(dir);
-  float delta = stepsize;
-  float3 delta_dir = norm_dir * delta;
-  float delta_dir_len = length(delta_dir);
-  float3 vec = start;
-  float4 col_acc = float4(0,0,0,0);
-  float alpha_acc = 0;
-  float length_acc = 0;
-  float4 color_sample;
-  float alpha_sample;
-
-  for(int i = 0; i < 1000; i++)
-    {
-      color_sample = tex3D(volume_tex,vec);
-      //color_sample = float4(1,1,1,0.1);
-      delta = stepsize + color_sample.r/255;
-      alpha_sample = color_sample.a * delta;
-      col_acc   += (1.0 - alpha_acc) * color_sample * alpha_sample * 3;
-      //col_acc.r+=i/50; // COOL
-      alpha_acc += alpha_sample;
-      delta_dir = norm_dir * delta;
-      vec += delta_dir;
-      length_acc += delta_dir_len;
-      if(length_acc >= len || alpha_acc > 1.0) break; // terminate if opacity > 1 or the ray is outside the volume
-    }
-
+  
   
 
-  //col_acc=float4(HSVtoRGB(float3(0.55,col_acc.g,col_acc.g*2)),col_acc.a);
+  float4 col_acc = float4(0,0,0,0);
+  float  alpha_acc = 0;
+  float  length_acc = 0;
+  
+  float  delta;
+  float3 delta_dir;
+  float4 color_sample;
+  float  alpha_sample;
 
-  //col_acc=float4(HSVtoRGB(float3(col_acc.g,1,1)),col_acc.a);
+  float3 sample_pos = sample_start;
+  float lastsample = 0;
+  for(int i = 0; i < 1000; i++)
+  {
+    if(fill_mode){
+   	  color_sample = float4(1,1,1,0.1);
+    } else {
+      color_sample = tex3D(volume_tex,sample_pos);
+    }
+    if(adaptive_mode){
+    	delta = stepsize+color_sample.r/255;
+    } else {
+    	delta = stepsize;
+    }
+    alpha_sample =  color_sample.a * delta;
+    if(color_mode){
+      color_sample = float4(HSVtoRGB(float3((color_sample.r-lastsample)*stepsize/delta,color_sample.r,color_sample.r)),color_sample.a);
+      lastsample = color_sample.r;
+    }
+    col_acc      += (1.0 - alpha_acc) * color_sample * alpha_sample * 3;
+    //col_acc.r  += i/50; // COOL
+    alpha_acc    += alpha_sample;
+    delta_dir    =  norm_dir * delta;
+    sample_pos   += delta_dir;
+    length_acc   += length(delta_dir);
+    if(length_acc >= len || alpha_acc > 1.0) break; 
+  }
+
+  
+  if(xray_mode){
+  	  col_acc=float4(HSVtoRGB(float3(0.55,col_acc.g,col_acc.g*2)),col_acc.a);
+  	  col_acc=float4(HSVtoRGB(float3(col_acc.g,1,1)),col_acc.a);
+  }
    
    
  
   OUT.Color =  col_acc;
-  //OUT.Color =  float4(start);
+  //OUT.Color =  float4(texc,1,1);
+  //OUT.Color =  float4(norm_dir,1);
   return OUT;
 }

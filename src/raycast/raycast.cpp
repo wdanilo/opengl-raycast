@@ -30,7 +30,6 @@
 
 
 #define WINDOW_SIZE 800
-#define VOLUME_TEX_SIZE 128
 
 using namespace std;
 
@@ -47,7 +46,18 @@ CGprogram vertex_main,fragment_main; // the raycasting shader programs
 GLuint volume_texture; // the volume texture
 GLuint backface_buffer; // the FBO buffers
 GLuint final_image;
-float stepsize = 1.0/50.0;
+
+bool    animation_mode   = false;
+bool    adaptive_mode    = false;
+bool    fill_mode		 = false;
+bool    xray_mode		 = false;
+bool    color_mode		 = false;
+bool    autoupdate_mode  = true;
+float 	stepsize 		 = 1.0/50.0;
+float 	volume_radius 	 = 0.12f;
+int 	volume_tex_size  = 64;
+bool 	verbose 		 = false;
+int 	noise_powerindex = 4;
 
 /// Implementation ----------------------------------------
 
@@ -73,7 +83,6 @@ void set_tex_param(string par, GLuint tex,const CGprogram &program,CGparameter p
 }
 
 
-// load_vertex_program: loading a vertex program
 void load_vertex_program(CGprogram &v_program, string shader_path, string program_name)
 {
 	assert(cgIsContext(context));
@@ -87,7 +96,6 @@ void load_vertex_program(CGprogram &v_program, string shader_path, string progra
 	cgGLDisableProfile(vertexProfile);
 }
 
-// load_fragment_program: loading a fragment program
 void load_fragment_program(CGprogram &f_program,string shader_path, string program_name)
 {
 	assert(cgIsContext(context));
@@ -118,7 +126,8 @@ void vertex(float x, float y, float z)
 	glMultiTexCoord3fARB(GL_TEXTURE1_ARB, x, y, z);
 	glVertex3f(x,y,z);
 }
-// this method is used to draw the front and backside of the volume
+
+// draw the front and backside of the volume
 void drawQuads(float x, float y, float z)
 {
 
@@ -168,6 +177,8 @@ void drawQuads(float x, float y, float z)
 
 }
 
+
+
 float gw4DNoise(float x, float y, float z,
 				float frequency, float offset, float freqMult, float roughness, float octaves)
 {
@@ -197,25 +208,28 @@ float gw4DNoise(float x, float y, float z,
 
 }
 
-// create a test volume texture, here you could load your own volume
-void create_volumetexture()
+void create_volumetexture(bool randomize=false)
 {
 	cout << "generating volume texture"<<endl;
-	srand ( time(NULL) );
 
-	int size = VOLUME_TEX_SIZE*VOLUME_TEX_SIZE*VOLUME_TEX_SIZE* 4;
-	//GLubyte *data = new GLubyte[size];
+	auto n = volume_tex_size;
 
-	auto n = VOLUME_TEX_SIZE;
-
-	float r =0.025f;
+	float r =volume_radius;
 
 	//GLubyte *ptr = data;
 
-	float rnd = (((float)rand())/RAND_MAX)/3;
-	int offset1 = rand()%50;
-	int offset2 = rand()%50;
-	int offset3 = rand()%50;
+	static float rnd = 0.219619;
+	static int offset1 = 19;
+	static int offset2 = 46;
+	static int offset3 = 49;
+
+	if (randomize){
+		srand ( time(NULL) );
+		rnd = (((float)rand())/RAND_MAX)/3;
+		offset1 = rand()%50;
+		offset2 = rand()%50;
+		offset3 = rand()%50;
+	}
 
 	unsigned char *data = new unsigned char[n*n*n];
 	unsigned char *ptr = data;
@@ -229,12 +243,11 @@ void create_volumetexture()
 	for(int x=0; x < n; ++x) {
 		for (int y=0; y < n; ++y) {
 			for (int z=0; z < n; ++z) {
-
 				float dx = center-x;
 				float dy = center-y;
 				float dz = center-z;
 
-				float off = 1.0;//gw4DNoise(x,y,z, frequency, 0 ,1.1+rnd, 1.1+rnd, 4);
+				float off = gw4DNoise(x,y,z, frequency, 0 ,1.1+rnd, 1.1+rnd, noise_powerindex);
 				off = abs(off);
 				//off = 1-pow(off/2,2);
 				//cout<<off<<endl;
@@ -252,11 +265,13 @@ void create_volumetexture()
 				*ptr++ = isFilled ? off*255 : 0;
 				//*ptr++ = (int)(off*255);
 
-				progress += 1;
-				int percent = (int)(100*((float)progress/total));
-				if (percent!=lastpercent){
-					lastpercent = percent;
-					cout << "progress: " << percent <<"%" <<endl;
+				if(verbose){
+					progress += 1;
+					int percent = (int)(100*((float)progress/total));
+					if (percent!=lastpercent){
+						lastpercent = percent;
+						cout << "progress: " << percent <<"%" <<endl;
+					}
 				}
 			}
 		}
@@ -282,6 +297,13 @@ void create_volumetexture()
 	delete []data;
 	cout << "volume texture generated" << endl;
 
+}
+
+
+void update_volumetexture(bool force=false){
+	if (force || autoupdate_mode){
+		create_volumetexture();
+	}
 }
 
 void init()
@@ -344,7 +366,6 @@ void init()
 	load_fragment_program(fragment_main,"shader.cg","fragment_main");
 	cgErrorCallback();
 
-	// Create the to FBO's one for the backside of the volumecube and one for the finalimage rendering
 	cout << "creating 'backside' and 'volume' framebuffers" << endl;
 	glGenFramebuffersEXT(1, &framebuffer);
 	glBindFramebufferEXT(GL_FRAMEBUFFER_EXT,framebuffer);
@@ -461,8 +482,13 @@ void raycasting_pass()
 	cgGLBindProgram(vertex_main);
 	cgGLBindProgram(fragment_main);
 	cgGLSetParameter1f( cgGetNamedParameter( fragment_main, "stepsize") , stepsize);
+	cgGLSetParameter1f( cgGetNamedParameter( fragment_main, "adaptive_mode") , adaptive_mode);
+	cgGLSetParameter1f( cgGetNamedParameter( fragment_main, "fill_mode") , fill_mode);
+	cgGLSetParameter1f( cgGetNamedParameter( fragment_main, "xray_mode") , xray_mode);
+	cgGLSetParameter1f( cgGetNamedParameter( fragment_main, "color_mode") , color_mode);
 	set_tex_param("tex",backface_buffer,fragment_main,param1);
 	set_tex_param("volume_tex",volume_texture,fragment_main,param2);
+
 	glEnable(GL_CULL_FACE);
 	glCullFace(GL_BACK);
 	drawQuads(1.0,1.0, 1.0);
@@ -491,11 +517,9 @@ float pan_drag = 0.95;
 float _xdistance = 0.1;
 
 
-// This display function is called once pr frame
+// called every frame
 void display()
 {
-	//static float rotate = 0;
-	//rotate += 0.25;
 	controls::enterFrame();
 
 	resize(WINDOW_SIZE,WINDOW_SIZE);
@@ -515,21 +539,163 @@ void display()
 }
 
 
+void printHelp(){
+	cout << endl;
+	cout << "------ HELP ------" << endl;
+	cout << "r     - generate new volume" << endl;
+	cout << "u     - force volume update" << endl;
+	cout << "w     - increase step size" << endl;
+	cout << "e     - decrease step size" << endl;
+	cout << ">     - increase volume radius" << endl;
+	cout << "<     - decrease volume radius" << endl;
+	cout << "+     - increase volume tex size" << endl;
+	cout << "-     - decrease volume tex size" << endl;
+	cout << "]     - increase noise power index" << endl;
+	cout << "[     - decrease noise power index" << endl;
+	cout << endl;
+	cout << "/     - toggle animation" << endl;
+	cout << "i     - toggle interactive (autoupdate) mode" << endl;
+	cout << "a     - toggle adaptive mode" << endl;
+	cout << "z     - toggle fill mode" << endl;
+	cout << "x     - toggle xray mode" << endl;
+	cout << "c     - toggle color mode" << endl;
+	cout << "space - toggle volume / back buffers" << endl;
+	cout << endl;
+	cout << "v     - toggle verbosity mode" << endl;
+	cout << "s     - prints status message" << endl;
+	cout << "h     - prints this help message" << endl;
+	cout << "-------------------" << endl << endl;
+}
+
+void printStatus(){
+	cout << endl;
+	cout << "------ STATUS ------" << endl;
+	cout << "volume stepsize   = " << stepsize << endl;
+	cout << "volume radius     = " << volume_radius << endl;
+	cout << "volume tex size   = " << volume_tex_size << endl;
+	cout << "noise power index = " << noise_powerindex << endl;
+	cout << "interactive mode  = " << ((autoupdate_mode)?"on":"off") << endl;
+	cout << "adaptive mode     = " << ((adaptive_mode)?"on":"off") << endl;
+	cout << "fill mode         = " << ((fill_mode)?"on":"off") << endl;
+	cout << "xray mode         = " << ((xray_mode)?"on":"off") << endl;
+	cout << "color mode        = " << ((color_mode)?"on":"off") << endl;
+	cout << "verbose mode      = " << ((verbose)?"on":"off") << endl;
+	cout << "--------------------" << endl << endl;
+}
+
 void setupControls(){
 
 	controls::init();
+
+	controls::onKeyRelease('h', [](){
+		printHelp();
+	});
+
 	controls::onKeyDown('w', [](){
 		stepsize += 1.0/2048.0;
 		if(stepsize > 0.5) stepsize = 0.5 ;
+		printStatus();
 	});
 
 	controls::onKeyDown('e', [](){
 		stepsize -= 1.0/2048.0;
-		if(stepsize <= 1.0/200.0) stepsize = 1.0/200.0;
+		if(stepsize <= 1.0/500.0) stepsize = 1.0/500.0;
+		printStatus();
 	});
 
 	controls::onKeyRelease(' ', [](){
 		toggle_visuals = !toggle_visuals;
+	});
+
+	controls::onKeyRelease('r', [](){
+		create_volumetexture(true);
+	});
+
+	controls::onKeyRelease('>', [](){
+		volume_radius += 0.01;
+		update_volumetexture();
+		printStatus();
+	});
+
+	controls::onKeyRelease('<', [](){
+		volume_radius -= 0.01;
+		update_volumetexture();
+		printStatus();
+	});
+
+	controls::onKeyRelease(']', [](){
+		noise_powerindex +=1;
+		update_volumetexture();
+		printStatus();
+	});
+
+	controls::onKeyRelease('[', [](){
+		noise_powerindex -=1;
+		update_volumetexture();
+		printStatus();
+	});
+
+	controls::onKeyRelease('-', [](){
+		volume_tex_size /= 2;
+		if (volume_tex_size<4){
+			volume_tex_size = 4;
+			cout << "Minimum volume tex size!"<<endl;
+		}
+		else{
+			update_volumetexture();
+		}
+		printStatus();
+	});
+
+	controls::onKeyRelease('=', [](){
+		volume_tex_size *= 2;
+		if (volume_tex_size>256){
+			volume_tex_size = 256;
+			cout << "Maximum volume tex size!"<<endl;
+		}
+		else{
+			update_volumetexture();
+		}
+		printStatus();
+	});
+
+	controls::onKeyRelease('/', [](){
+		animation_mode = !animation_mode;
+	});
+
+	controls::onKeyRelease('i', [](){
+		autoupdate_mode = !autoupdate_mode;
+		update_volumetexture();
+		printStatus();
+	});
+
+	controls::onKeyRelease('u', [](){
+		update_volumetexture(true);
+	});
+
+	controls::onKeyRelease('a', [](){
+		adaptive_mode = !adaptive_mode;
+		printStatus();
+	});
+
+	controls::onKeyRelease('z', [](){
+		fill_mode = !fill_mode;
+		printStatus();
+	});
+
+	controls::onKeyRelease('x', [](){
+		xray_mode = !xray_mode;
+		printStatus();
+	});
+
+	controls::onKeyRelease('c', [](){
+		color_mode = !color_mode;
+		printStatus();
+	});
+
+	controls::onKeyRelease('v', [](){
+		verbose = !verbose;
+		printStatus();
 	});
 
 	controls::onMousePress([](int button, int x, int y){
@@ -565,9 +731,11 @@ void setupControls(){
 			rot_y = y;
 		} else {
 			rot_h += rot_h_vel;
-			rot_h_vel *= rot_drag;
 			rot_v += rot_v_vel;
-			rot_v_vel *= rot_drag;
+			if(!animation_mode){
+				rot_h_vel *= rot_drag;
+				rot_v_vel *= rot_drag;
+			}
 		}
 
 		if(pan_mode){
@@ -597,6 +765,9 @@ int main(int argc, char* argv[])
 
 	setupControls();
 	init();
+
+	printStatus();
+	printHelp();
 
 
 	glutMainLoop();
